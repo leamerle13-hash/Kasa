@@ -11,10 +11,6 @@ export default function About() {
     }
 
 
-    const icon = document.querySelector(".accordion__icon")
-    icon.addEventListener("click", () => {
-
-    })
 
     return (
         <main>
