@@ -1,0 +1,15 @@
+@mixin banner {
+    width: 100%;
+    height: 180px;
+    border-radius: 25px;
+    margin-top: 2em;
+    position: relative;
+}
+
+@mixin bannerAfter {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
