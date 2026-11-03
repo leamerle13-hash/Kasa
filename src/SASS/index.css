@@ -18,19 +18,24 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.header__title {
-  font-size: 3em;
-  color: #FF6060;
-  font-weight: 500;
+.header__logo {
+  height: 100%;
+}
+.header__logo-img {
+  height: 100%;
+  width: 100%;
 }
 .header__navbar {
   display: flex;
   gap: 2.5em;
-  font-size: 1em;
-  font-weight: 500;
 }
 .header__navbar-link {
   color: #000000;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.header__navbar-link:first-child {
+  text-decoration: underline;
 }
 
 .error {
@@ -179,13 +184,40 @@ main {
   width: 100%;
   background-color: #FF6060;
   color: white;
-  padding: 1em;
+  padding: 0.5em 1em;
   border-radius: 5px;
   font-weight: 700;
   margin-top: 1em;
+  position: relative;
+  z-index: 100;
 }
 .accordion__content {
   display: none;
   padding: 1em;
   background-color: #F6F6F6;
+  border-radius: 0 0 5px 5px;
+  line-height: 22px;
+  font-weight: 500;
+  animation: dropDown 0.3s;
+}
+.accordion__content-text {
+  animation: dropDown 0.3s;
+}
+.accordion__icon {
+  background: none;
+  border: none;
+  color: white;
+}
+.accordion__icon > svg {
+  width: 40px;
+  height: 40px;
+}
+
+@keyframes dropDown {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=index.css.map */
