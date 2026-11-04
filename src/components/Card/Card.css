@@ -1,0 +1,52 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 3em;
+  margin: 3em 0;
+  border-radius: 25px;
+  background-color: #F6F6F6;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em 0;
+    background-color: white;
+    padding: 0;
+    border-radius: 10px;
+  }
+}
+
+.card {
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  min-height: 200px;
+}
+.card::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+  border-radius: 10px;
+}
+.card__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+.card__title {
+  color: white;
+  font-weight: 700;
+  max-width: 200px;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  z-index: 20;
+}/*# sourceMappingURL=Card.css.map */

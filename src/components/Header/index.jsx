@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png"
+import "./Header.scss"
 
 export default function Header() {
     return (
@@ -8,8 +9,8 @@ export default function Header() {
                 <img className="header__logo-img" src={logo} alt="Kasa logo" />
             </div>
             <nav className="header__navbar">
-                <Link to="/" className="header__navbar-link">Accueil</Link>
-                <Link to="/about" className="header__navbar-link">A Propos</Link>
+                <NavLink to="/" className="header__navbar-link">Accueil</NavLink>
+                <NavLink to="/about" className="header__navbar-link">A Propos</NavLink>
             </nav>
         </header>
     )

@@ -1,0 +1,27 @@
+@use "../../SASS/variables";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: variables.$secondary-color;
+    color: white;
+    padding: 2em;
+    &__logo {
+        margin: 1em 0;
+    }
+    &__text {
+        @media (max-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        @media (min-width: 768px) {
+            display: flex;
+            gap: 5px;
+        }
+    }
+    
+}

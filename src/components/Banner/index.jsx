@@ -1,10 +1,9 @@
-import picture from "../../assets/picture1.jpg"
+import "./Banner.scss"
 
 export default function Banner() {
     return (
         <div className="banner">
-            <img src={picture} className="banner__img" alt="photo d'une falaise" />
-            <h2 className="banner__text">Chez vous, partout et ailleurs</h2>
+            <h2 className="banner__text">Chez vous, <br className="banner__mobile-break" />partout et ailleurs</h2>
         </div>
     )
 }

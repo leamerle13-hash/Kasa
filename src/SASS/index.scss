@@ -1,5 +1,6 @@
-@use "variables";
+@use "variables"; 
 @use "mixins";
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap');
 
 * {
@@ -15,31 +16,7 @@ body {
     margin: auto;
 }
 
-.header {
-    padding: 1em 3em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &__logo {
-        height: 100%;
-        &-img {
-            height: 100%;
-            width: 100%;
-        }
-    }
-    &__navbar {
-        display: flex;
-        gap: 2.5em;
-        &-link {
-            color: variables.$secondary-color;
-            font-size: 1.3em;
-            font-weight: 500;
-            &:first-child {
-                text-decoration: underline;
-            }
-        }
-    }
-}
+
 
 /////ERRROR
 
@@ -61,96 +38,6 @@ body {
         text-decoration: underline;
         color: variables.$secondary-color;
         font-weight: 500;
-    }
-}
-
-/////FOOTER
-
-.footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: variables.$secondary-color;
-    color: white;
-    padding: 2em;
-    &__logo {
-        font-size: 2em;
-        font-weight: 500;
-        margin: 0.5em 0;
-    }
-}
-
-
-////HOME BANNER
-
-aside,
-main {
-    padding: 0 3em;
-}
-
-.banner {
-    @include mixins.banner;
-    &::after {
-        @include mixins.bannerAfter;
-    }
-    &__img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 25px;
-    }
-    &__text {
-        position: absolute;
-        bottom: 30%;
-        left: 20%;
-        color: white;
-        font-size: 3em;
-        text-shadow: 3px 3px #00000040;
-        z-index: 100;
-        font-size: 2.5em;
-    }
-}
-
-
-/////HOME CARDS
-
-.wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 3em;
-    margin: 3em 0;
-    border-radius: 25px;
-    background-color: variables.$tertary-color;
-    gap: 3em;
-}
-
-.card {
-    border-radius: 10px;
-    position: relative;
-    cursor: pointer;
-    &::after {
-        content: "";
-        inset: 0;
-        position: absolute;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
-        border-radius: 10px;
-    }
-    &__img {
-        height: 100%;
-        width: 100%;
-        border-radius: 10px;
-        object-fit: cover;
-    }
-    &__title {
-        color: white;
-        font-weight: 700;
-        max-width: 200px;
-        position: absolute;
-        bottom: 5%;
-        left: 5%;
-        z-index: 20;
     }
 }
 
@@ -212,6 +99,14 @@ main {
     }
 }
 
+.icon-animation {
+    animation: rotateIcon 0.5s ease-in-out forwards;
+}
+
+.icon-animation2 {
+    animation: rotateIcon2 0.5s ease-in-out forwards;
+}
+
 @keyframes dropDown {
     from {
         transform: translateY(-30px);
@@ -220,3 +115,23 @@ main {
         transform: translateY(0);
     }
 }
+
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-0.5turn);
+    }
+}
+
+@keyframes rotateIcon2 {
+    from {
+        transform: rotate(-0.5turn);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+
+/// 768 1024

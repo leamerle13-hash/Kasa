@@ -1,3 +1,5 @@
+import "./Card.scss"
+
 export default function Card(props) {
     return (
         <article className="card">
