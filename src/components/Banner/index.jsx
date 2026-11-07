@@ -1,9 +1,11 @@
 import "./Banner.scss"
 
-export default function Banner() {
+
+export default function Banner(props) {
     return (
         <div className="banner">
-            <h2 className="banner__text">Chez vous, <br className="banner__mobile-break" />partout et ailleurs</h2>
+            <img className="banner__img" src={props.img} alt={props.alt} />
+            <h2 className="banner__text">{props.text}</h2>
         </div>
     )
-}
+} 

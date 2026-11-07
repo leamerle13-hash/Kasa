@@ -1,0 +1,41 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FF6060;
+}
+.error__title {
+  font-size: 9em;
+  margin: 0.5em 0;
+}
+@media (max-width: 768px) {
+  .error__title {
+    font-size: 6em;
+  }
+}
+.error__description {
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .error__description {
+    font-size: 1.1em;
+  }
+}
+@media (max-width: 768px) {
+  .error__description-container {
+    text-align: center;
+    max-width: 250px;
+  }
+}
+.error__link {
+  margin: 5em 0;
+  text-decoration: underline;
+  color: #000000;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .error__link {
+    font-size: 0.9em;
+  }
+}/*# sourceMappingURL=Error.css.map */

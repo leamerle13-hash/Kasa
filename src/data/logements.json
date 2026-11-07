@@ -1,4 +1,3 @@
-const logements =
 	[
 		{
 			"id": "c67ab8a7",
@@ -618,4 +617,3 @@ const logements =
 			]
 		}
 	]
-export default logements

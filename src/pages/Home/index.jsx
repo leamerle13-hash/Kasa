@@ -1,6 +1,7 @@
 import Banner from "../../components/Banner"
 import Card from "../../components/Card"
 import logements from "../../data/logements"
+import backgroundHome from "../../assets/picture1.jpg"
 
 export default function Home() {
 
@@ -8,6 +9,7 @@ export default function Home() {
         return (
             <Card 
                 key={logement.id} 
+                id={logement.id}
                 cover={logement.cover} 
                 title={logement.title} 
             />
@@ -19,7 +21,11 @@ export default function Home() {
     return (
         <>
             <aside>
-                <Banner />
+                <Banner
+                    text="Chez vous, partout et ailleurs"
+                    img={backgroundHome}
+                    alt="photo de falaises"
+                />
             </aside>
             <main>
                 <div className="wrapper">
