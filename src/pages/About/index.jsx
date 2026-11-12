@@ -43,12 +43,16 @@ export default function About() {
 
     const [dropdown, setDropdown] = React.useState(null)
 
+    function toggle(id) {
+        setDropdown(prev => prev === id ? null : id)
+    }
+
     const dropdownDisplay = data.map((article) => {
         return (
             <DropdownMenu
                 key={article.id} 
                 title={article.title}
-                content={article.content}
+                content={<p className="dropdown__content-text">{article.content}</p>}
                 toggle={toggle}
                 id={article.id}
                 isOpen={dropdown === article.id}
@@ -56,9 +60,6 @@ export default function About() {
         )
     })
 
-    function toggle(id) {
-        setDropdown(prev => prev === id ? null : id)
-    }
     
     return (
         <main>

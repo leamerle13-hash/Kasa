@@ -1,0 +1,24 @@
+.rating__star-active {
+  fill: #FF6060;
+  width: 24px;
+  height: 24px;
+  stroke: none;
+}
+@media (max-width: 768px) {
+  .rating__star-active {
+    width: 17px;
+    height: 17px;
+  }
+}
+.rating__star-grey {
+  fill: #E3E3E3;
+  width: 24px;
+  height: 24px;
+  stroke: none;
+}
+@media (max-width: 768px) {
+  .rating__star-grey {
+    width: 17px;
+    height: 17px;
+  }
+}/*# sourceMappingURL=Rating.css.map */

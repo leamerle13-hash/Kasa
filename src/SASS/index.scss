@@ -8,7 +8,18 @@
     text-decoration: none;
 }
 
+html {
+    height: 100%vh;
+}
+
 body {
     max-width: 1300px;
     margin: auto;
+    min-height: 100vh;
+}
+
+#root {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }

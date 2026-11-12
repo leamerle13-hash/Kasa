@@ -21,35 +21,34 @@
     margin-top: 1em;
     position: relative;
     z-index: 100;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
     &__content {
         display: none;
-        padding: 1em;
+        padding: 1em 1.5em;
         background-color: variables.$tertary-color;
         border-radius: 0 0 5px 5px;
         line-height: 22px;
         font-weight: 500;
         animation: dropDown 0.3s;
+        width: 100%;
         &-text {
             animation: dropDown 0.3s;
         }
     }
     &__icon {
-        background: none;
-        border: none;
         color: white;
-        & > svg {
-            width: 40px;
-            height: 40px;
+        width: 40px;
+        height: 40px;
+
+    }
+    &__chevron {
+        transition: transform 0.3s ease;
+        &.rotate {
+            transform: rotate(-180deg);
         }
     }
-}
-
-.icon-animation {
-    animation: rotateIcon 0.5s ease-in-out forwards;
-}
-
-.icon-animation2 {
-    animation: rotateIcon2 0.5s ease-in-out forwards;
 }
 
 @keyframes dropDown {
@@ -58,23 +57,5 @@
     }
     to {
         transform: translateY(0);
-    }
-}
-
-@keyframes rotateIcon {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(-0.5turn);
-    }
-}
-
-@keyframes rotateIcon2 {
-    from {
-        transform: rotate(-0.5turn);
-    }
-    to {
-        transform: rotate(0);
     }
 }

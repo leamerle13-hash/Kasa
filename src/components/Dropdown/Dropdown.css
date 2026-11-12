@@ -20,35 +20,33 @@
   margin-top: 1em;
   position: relative;
   z-index: 100;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
 }
 .dropdown__content {
   display: none;
-  padding: 1em;
+  padding: 1em 1.5em;
   background-color: #F6F6F6;
   border-radius: 0 0 5px 5px;
   line-height: 22px;
   font-weight: 500;
   animation: dropDown 0.3s;
+  width: 100%;
 }
 .dropdown__content-text {
   animation: dropDown 0.3s;
 }
 .dropdown__icon {
-  background: none;
-  border: none;
   color: white;
-}
-.dropdown__icon > svg {
   width: 40px;
   height: 40px;
 }
-
-.icon-animation {
-  animation: rotateIcon 0.5s ease-in-out forwards;
+.dropdown__chevron {
+  transition: transform 0.3s ease;
 }
-
-.icon-animation2 {
-  animation: rotateIcon2 0.5s ease-in-out forwards;
+.dropdown__chevron.rotate {
+  transform: rotate(-180deg);
 }
 
 @keyframes dropDown {
@@ -57,21 +55,5 @@
   }
   to {
     transform: translateY(0);
-  }
-}
-@keyframes rotateIcon {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(-0.5turn);
-  }
-}
-@keyframes rotateIcon2 {
-  from {
-    transform: rotate(-0.5turn);
-  }
-  to {
-    transform: rotate(0);
   }
 }/*# sourceMappingURL=Dropdown.css.map */

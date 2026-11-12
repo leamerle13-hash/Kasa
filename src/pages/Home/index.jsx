@@ -1,3 +1,4 @@
+import "./Home.scss"
 import Banner from "../../components/Banner"
 import Card from "../../components/Card"
 import logements from "../../data/logements"
