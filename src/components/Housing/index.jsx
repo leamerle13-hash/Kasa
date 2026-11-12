@@ -6,6 +6,7 @@ import Slideshow from "../Slideshow"
 import Rating from "../Rating"
 import { useState } from "react"
 import React from "react"
+import { Navigate } from "react-router-dom"
 
 export default function Housing() {
 
@@ -14,6 +15,10 @@ export default function Housing() {
     const logement = logements.find(
         (article) => article.id === id
     )
+
+    if (!logement){
+        return <Navigate to="/error/" />
+    }
 
     const tags = logement.tags.map((tag) => {
         return (
