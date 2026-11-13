@@ -11,8 +11,6 @@
 .dropdown {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
     background-color: variables.$primary-color;
     color: white;
     padding: 0.5em 1em;
@@ -58,4 +56,8 @@
     to {
         transform: translateY(0);
     }
+}
+
+.container {
+    width: 100%;
 }

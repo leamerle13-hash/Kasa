@@ -80,7 +80,7 @@ export default function Housing() {
                 <DropdownMenu 
                     title="Description" 
                     content={logement.description}
-                    className="dropdown"
+                    className="housing__details-dropdown"
                     toggle={toggle}
                     id="description"
                     isOpen={dropdown === "description"}
@@ -90,6 +90,7 @@ export default function Housing() {
                     title="Equipements"
                     content={<ul className="housing__details-equipements">{listDisplay}</ul>}
                     toggle={toggle}
+                    className="housing__details-dropdown"
                     id="equipements"
                     isOpen={dropdown === "equipements"}
                 />
