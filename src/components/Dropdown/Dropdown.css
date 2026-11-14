@@ -41,10 +41,15 @@
   height: 40px;
 }
 .dropdown__chevron {
+  transform: rotate(90deg);
+  width: 30px;
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
   transition: transform 0.3s ease;
 }
 .dropdown__chevron.rotate {
-  transform: rotate(-180deg);
+  transform: rotate(-90deg);
 }
 
 @keyframes dropDown {
