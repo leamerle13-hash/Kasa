@@ -33,10 +33,13 @@ export default function Housing() {
     const firstName = nameSplit[0]
     const lastName = nameSplit[1]
 
-    const [dropdown, setDropdown] = React.useState(null)
+    const [dropdown, setDropdown] = React.useState([])
 
     function toggle(id) {
-        setDropdown(prev => prev === id ? null : id)
+        setDropdown(prev => 
+            prev.includes(id) 
+            ? prev.filter(item => item !== id)
+            : [...prev, id])
     }
 
     const listDisplay = logement.equipments.map((item) => {
@@ -83,7 +86,7 @@ export default function Housing() {
                     className="housing__details-dropdown"
                     toggle={toggle}
                     id="description"
-                    isOpen={dropdown === "description"}
+                    isOpen={dropdown.includes("description")}
                 />
                 <div></div>
                 <DropdownMenu 
@@ -92,7 +95,7 @@ export default function Housing() {
                     toggle={toggle}
                     className="housing__details-dropdown"
                     id="equipements"
-                    isOpen={dropdown === "equipements"}
+                    isOpen={dropdown.includes("equipements")}
                 />
             </div>
         </div>
