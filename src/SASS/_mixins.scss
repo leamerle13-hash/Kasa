@@ -37,11 +37,8 @@
 }
 
 @mixin star {
-    width: 24px;
-    height: 24px;
-    stroke: none;
+    font-size: 24px;
     @media (max-width: 768px){
-        width: 17px;
-        height: 17px;
+        font-size: 19px;
     }
 }

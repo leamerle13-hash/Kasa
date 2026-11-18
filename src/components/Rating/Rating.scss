@@ -1,14 +1,12 @@
 @use "../../SASS/variables";
 @use "../../SASS/mixins";
 
-.rating__star {
-    &-active {
-        fill: variables.$primary-color;
-        @include mixins.star;
-    }
-    &-grey {
-        fill: #E3E3E3;
-        @include mixins.star;
-    }
+.rating__star-active {
+    color: variables.$primary-color;
+    @include mixins.star;
 }
 
+.rating__star-grey {
+    color: #E3E3E3;
+    @include mixins.star;
+}
