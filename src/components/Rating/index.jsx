@@ -10,7 +10,7 @@ export default function Rating(props) {
                     key={index}
                     className={index < rating ? "rating__star-active" : "rating__star-grey"}
                 >
-                    {index < rating ? "★" : "★"}
+                    {"★"}
                 </span>
             ) 
         })

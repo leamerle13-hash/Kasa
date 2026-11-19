@@ -22,9 +22,9 @@ export default function Housing() {
 
     const tags = logement.tags.map((tag) => {
         return (
-            <ul key={tag} className="housing__tags-item">
+            <li key={tag} className="housing__tags-item">
                 {tag}
-            </ul>
+            </li>
         )
     })
 
@@ -60,9 +60,9 @@ export default function Housing() {
                 <div>
                     <h1 className="housing__title">{logement.title}</h1>
                     <h2 className="housing__location">{logement.location}</h2>
-                    <li className="housing__tags">
+                    <ul className="housing__tags">
                         {tags}
-                    </li>
+                    </ul>
                 </div>
                 <div className="housing__container">
                     <div className="housing__host">
