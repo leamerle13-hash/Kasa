@@ -1,7 +1,7 @@
 import "./Banner.scss"
 
 
-export default function Banner(props) {
+export const Banner = (props) => {
     return (
         <div className="banner">
             <img className="banner__img" src={props.img} alt={props.alt} />

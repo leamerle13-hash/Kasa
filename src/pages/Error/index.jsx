@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Error.scss"
 
-export default function Error() {
+export const Error = () => {
     return (
         <div className="page">
             <div className="error">

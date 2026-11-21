@@ -1,11 +1,11 @@
 import "./About.scss"
 import { useState } from "react"
 import backgroundAbout from "../../assets/picture2.jpg"
-import Banner from "../../components/Banner"
-import DropdownMenu from "../../components/Dropdown"
+import {Banner} from "../../components/Banner"
+import {DropdownMenu} from "../../components/Dropdown"
 import string from "../../data/string.json"
 
-export default function About() {
+export const About = () => {
 
     const [dropdown, setDropdown] = useState(null)
 

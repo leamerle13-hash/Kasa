@@ -1,7 +1,7 @@
 import "./Dropdown.scss"
 import arrow from "../../assets/arrow_left.png"
 
-export default function DropdownMenu(props) {
+export const DropdownMenu = (props) => {
     return (
         <div className="container">
             <button onClick={() => props.toggle(props.id)} className="dropdown">

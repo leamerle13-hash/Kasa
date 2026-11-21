@@ -4,7 +4,7 @@ import "./Slideshow.scss"
 import { useState } from "react"
 
 
-export default function Slideshow(props) {
+export const Slideshow = (props) => {
     const [index, setIndex] = useState(0)
 
     function nextSlide() {

@@ -1,6 +1,6 @@
 import "./Home.scss"
-import Banner from "../../components/Banner"
-import Card from "../../components/Card"
+import {Banner} from "../../components/Banner"
+import {Card} from "../../components/Card"
 import logements from "../../data/logements"
 import backgroundHome from "../../assets/picture1.jpg"
 

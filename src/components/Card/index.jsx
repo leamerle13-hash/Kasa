@@ -1,7 +1,7 @@
 import "./Card.scss"
 import { Link } from "react-router-dom"
 
-export default function Card(props) {
+export const Card = (props) => {
     return (
         <Link to={`/housing/${props.id}`}>
             <article className="card">

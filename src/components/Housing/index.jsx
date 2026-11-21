@@ -1,14 +1,13 @@
 import "./Housing.scss"
 import { useParams } from 'react-router-dom'
 import logements from "../../data/logements.json"
-import DropdownMenu from "../Dropdown"
-import Slideshow from "../Slideshow"
-import Rating from "../Rating"
-import { useId, useRef, useState } from "react"
-import React from "react"
+import {DropdownMenu} from "../Dropdown"
+import {Slideshow} from "../Slideshow"
+import {Rating} from "../Rating"
+import { useState } from "react"
 import { Navigate } from "react-router-dom"
 
-export default function Housing() {
+export const Housing = () => {
 
     const { id } = useParams()
 

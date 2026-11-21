@@ -1,6 +1,6 @@
 import "./Rating.scss"
 
-export default function Rating(props) {
+export const Rating = (props) => {
     const rating = parseInt(props.rating)
 
     const starsArray = Array.from([1, 2, 3, 4, 5])

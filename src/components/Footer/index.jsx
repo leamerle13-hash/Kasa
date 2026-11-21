@@ -1,7 +1,7 @@
 import "./Footer.scss"
 import logo from "../../assets/logo-black.png"
 
-export default function Footer() {
+export const Footer = () => {
     return (
         <footer className="footer">
             <img className="footer__logo" src={logo} alt="logo Kasa" />
