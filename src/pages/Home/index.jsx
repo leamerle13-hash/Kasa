@@ -4,7 +4,7 @@ import Card from "../../components/Card"
 import logements from "../../data/logements"
 import backgroundHome from "../../assets/picture1.jpg"
 
-export default function Home() {
+export const Home = () => {
 
     const card = logements.map((logement) => {
         return (
@@ -17,8 +17,6 @@ export default function Home() {
         )
     })
 
-    const cardDisplayDesktop = card.slice(0, 6)
-
     return (
         <>
             <aside>
@@ -30,7 +28,7 @@ export default function Home() {
             </aside>
             <main>
                 <div className="wrapper">
-                    {cardDisplayDesktop}
+                    {card}
                 </div>
             </main>
         </>
