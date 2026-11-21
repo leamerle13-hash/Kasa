@@ -4,7 +4,7 @@ import logements from "../../data/logements.json"
 import DropdownMenu from "../Dropdown"
 import Slideshow from "../Slideshow"
 import Rating from "../Rating"
-import { useState } from "react"
+import { useId, useRef, useState } from "react"
 import React from "react"
 import { Navigate } from "react-router-dom"
 
@@ -33,7 +33,7 @@ export default function Housing() {
     const firstName = nameSplit[0]
     const lastName = nameSplit[1]
 
-    const [dropdown, setDropdown] = React.useState([])
+    const [dropdown, setDropdown] = useState([])
 
     function toggle(id) {
         setDropdown(prev => 
@@ -47,8 +47,6 @@ export default function Housing() {
             <li key={item}>{item}</li>
         )
     })
-
-    
 
     return (
         <div className="housing">
@@ -88,7 +86,7 @@ export default function Housing() {
                     id="description"
                     isOpen={dropdown.includes("description")}
                 />
-                <div></div>
+                
                 <DropdownMenu 
                     title="Equipements"
                     content={<ul className="housing__details-equipements">{listDisplay}</ul>}
